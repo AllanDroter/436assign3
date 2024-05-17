@@ -22,4 +22,8 @@ public class MenuItem {
     public double getCost() {
         return cost;
     }
+
+    public String toString() {
+        return ""+itemNum+". "+description+"  -  $"+cost;
+    }
 }

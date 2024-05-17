@@ -8,6 +8,10 @@ public class DisplayTab implements Command{
     }
 
     public void execute() {
-        // display tab code
+        String[] tabItems = aggregator.getTab().getTabItems();
+        System.out.println("The items on your tab:\n");
+        for (String item : tabItems) {
+            System.out.println(item);
+        }
     }
 }

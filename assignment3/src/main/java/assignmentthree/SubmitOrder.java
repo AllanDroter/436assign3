@@ -10,6 +10,6 @@ public class SubmitOrder implements Command{
     }
 
     public void execute() {
-        // submit order code
+        aggregator.getOrder().add(itemNum);
     }
 }
