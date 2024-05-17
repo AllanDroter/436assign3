@@ -4,12 +4,6 @@ public class MenuItem {
     int itemNum;
     String description;
     double cost;
-
-    // public MenuItem() {
-    //     name = null;
-    //     category = 0;
-    //     price = 0;
-    // }
     
     public MenuItem(int itemNum, String description, double cost) {
         this.itemNum = itemNum;

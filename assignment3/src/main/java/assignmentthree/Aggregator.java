@@ -17,5 +17,7 @@ public class Aggregator {
         return order;
     }
 
-    // add getter for tab maybe
+    public Tab getTab() {
+        return new Tab(menu, order);
+    }
 }

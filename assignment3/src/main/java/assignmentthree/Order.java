@@ -9,8 +9,12 @@ public class Order {
         orderItems = new ArrayList<OrderItem>();
     }
 
-    // add
+    public void add(int itemNum) {
+        OrderItem item = new OrderItem(itemNum);
+        orderItems.add(item);
+    }
 
+    // replace wwith iterator later
     public ArrayList<OrderItem> getOrderItems() {
         return orderItems;
     }

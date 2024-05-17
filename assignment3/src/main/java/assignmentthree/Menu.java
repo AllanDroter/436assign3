@@ -9,10 +9,12 @@ public class Menu {
         menuItems = new ArrayList<MenuItem>();
     }
 
-    // add
+    public void add(int itemNum, String description, double cost) {
+        MenuItem item = new MenuItem(itemNum, description, cost);
+        menuItems.add(item);
+    }
 
-    // delete
-
+    // replace with iterator
     public ArrayList<MenuItem> getMenuItems() {
         return menuItems;
     }
