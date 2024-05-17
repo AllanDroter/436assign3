@@ -14,7 +14,7 @@ public class Aggregator {
     }
 
     public Order getOrder() {
-        return order
+        return order;
     }
 
     // add getter for tab maybe
