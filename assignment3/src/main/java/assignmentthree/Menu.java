@@ -13,5 +13,7 @@ public class Menu {
 
     // delete
 
-    // getter/iterator maybe
+    public ArrayList<MenuItem> getMenuItems() {
+        return menuItems;
+    }
 }

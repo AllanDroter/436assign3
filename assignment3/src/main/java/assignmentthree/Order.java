@@ -11,7 +11,7 @@ public class Order {
 
     // add
 
-    // delete
-
-    // getter/iterator maybe
+    public ArrayList<OrderItem> getOrderItems() {
+        return orderItems;
+    }
 }
