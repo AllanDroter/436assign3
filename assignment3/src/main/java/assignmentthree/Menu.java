@@ -3,7 +3,7 @@ package assignmentthree;
 import java.util.*;
 
 public class Menu {
-    ArrayList<Menutem> menuItems;
+    ArrayList<MenuItem> menuItems;
 
     public Menu() {
         menuItems = new ArrayList<MenuItem>();
