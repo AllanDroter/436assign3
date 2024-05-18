@@ -1,7 +1,5 @@
 package assignmentthree;
 
-import java.util.ArrayList;
-
 public class DisplayMenu implements Command{
     Aggregator aggregator;
 
@@ -11,11 +9,16 @@ public class DisplayMenu implements Command{
 
     public void execute() {
         // change after adding iterator
-        ArrayList<MenuItem> menuItems = aggregator.getMenu().getMenuItems();
+        MenuIterator menuIterator = aggregator.getMenu().getMenuIterator();
+        // ArrayList<MenuItem> menuItems = aggregator.getMenu().getMenuItems();
         System.out.println("Our menu items:\n");
 
-        for (MenuItem item : menuItems) {
-            System.out.println(item.toString());
+        // for (MenuItem item : menuItems) {
+        //     System.out.println(item.toString());
+        // }
+
+        while (menuIterator.hasNext()) {
+            System.out.println(menuIterator.next().toString());
         }
     }
 }

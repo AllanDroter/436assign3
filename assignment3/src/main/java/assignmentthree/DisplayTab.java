@@ -1,5 +1,7 @@
 package assignmentthree;
 
+import java.util.ArrayList;
+
 public class DisplayTab implements Command{
     Aggregator aggregator;
 
@@ -8,8 +10,9 @@ public class DisplayTab implements Command{
     }
 
     public void execute() {
-        String[] tabItems = aggregator.getTab().getTabItems();
+        ArrayList<String> tabItems = aggregator.getTab().getTabItems();
         System.out.println("The items on your tab:\n");
+        
         for (String item : tabItems) {
             System.out.println(item);
         }
