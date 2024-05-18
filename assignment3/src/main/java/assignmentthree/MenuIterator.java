@@ -2,5 +2,5 @@ package assignmentthree;
 
 public interface MenuIterator {
     public boolean hasNext();
-    public MenuItem next();
+    public MenuComponent next();
 }

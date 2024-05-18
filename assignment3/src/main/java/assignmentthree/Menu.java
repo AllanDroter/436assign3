@@ -2,17 +2,32 @@ package assignmentthree;
 
 import java.util.*;
 
-public class Menu {
-    ArrayList<MenuItem> menuItems;
+public class Menu extends MenuComponent{
+    ArrayList<MenuComponent> menuItems = new ArrayList<MenuComponent>();
+    String name;
 
-    public Menu() {
-        menuItems = new ArrayList<MenuItem>();
+    public Menu(String name) {
+        this.name = name;
     }
 
     // add menu item
-    public void add(int itemNum, String description, double cost) {
-        MenuItem item = new MenuItem(itemNum, description, cost);
-        menuItems.add(item);
+    public void add(MenuComponent menuComponent) {
+        menuItems.add(menuComponent);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void print() {
+        System.out.println("\n "+getName());
+        System.out.println("------------------");
+
+        MenuIterator iterator = getMenuIterator();
+        while (iterator.hasNext()) {
+            MenuComponent menuComponent = iterator.next();
+            menuComponent.print();
+        }
     }
 
     // Menu Iterator
@@ -29,8 +44,8 @@ public class Menu {
             return true;
         }
 
-        public MenuItem next() {
-            MenuItem item = menuItems.get(position);
+        public MenuComponent next() {
+            MenuComponent item = menuItems.get(position);
             position += 1;
             return item;
         }

@@ -3,16 +3,16 @@ package assignmentthree;
 import java.util.ArrayList;
 
 public class Tab {
-    Menu menu;
+    MenuComponent menuComponent;
     Order order;
 
-    public Tab(Menu menu, Order order) {
-        this.menu = menu;
+    public Tab(MenuComponent menuComponent, Order order) {
+        this.menuComponent = menuComponent;
         this.order = order;
     }
 
     public ArrayList<String> getTabItems() {
-        MenuIterator menuIterator = menu.getMenuIterator();
+        MenuIterator menuIterator = menuComponent.getMenuIterator();
         OrderIterator orderIterator = order.getOrderIterator();
 
         ArrayList<String> tabItems = new ArrayList<String>();
@@ -33,8 +33,8 @@ public class Tab {
             OrderItem oItem = orderIterator.next();
 
             while (menuIterator.hasNext()) {
-                MenuItem mItem = menuIterator.next();
-                
+                MenuComponent mItem = menuIterator.next();
+
                 if(mItem.getItemNumber() == oItem.getItemNum()) {
                     tabItems.add(mItem.toString());
                 }

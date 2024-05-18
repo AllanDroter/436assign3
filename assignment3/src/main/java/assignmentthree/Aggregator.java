@@ -1,16 +1,16 @@
 package assignmentthree;
 
 public class Aggregator {
-    Menu menu;
+    MenuComponent menuComponent;
     Order order;
 
-    public Aggregator(Menu menu, Order order) {
-        this.menu = menu;
+    public Aggregator(MenuComponent menuComponent, Order order) {
+        this.menuComponent = menuComponent;
         this.order = order;
     }
 
-    public Menu getMenu() {
-        return menu;
+    public MenuComponent getMenu() {
+        return menuComponent;
     }
 
     public Order getOrder() {
@@ -18,6 +18,6 @@ public class Aggregator {
     }
 
     public Tab getTab() {
-        return new Tab(menu, order);
+        return new Tab(menuComponent, order);
     }
 }
