@@ -1,15 +1,9 @@
 package assignmentthree;
 
-public class MenuItem {
+public class MenuItem extends MenuComponent{
     int itemNum;
     String description;
     double cost;
-
-    // public MenuItem() {
-    //     name = null;
-    //     category = 0;
-    //     price = 0;
-    // }
     
     public MenuItem(int itemNum, String description, double cost) {
         this.itemNum = itemNum;
@@ -27,5 +21,13 @@ public class MenuItem {
 
     public double getCost() {
         return cost;
+    }
+
+    // public String toString() {
+    //     return ""+itemNum+". "+description+"  -  $"+cost;
+    // }
+
+    public void print() {
+        System.out.println(getItemNumber()+". "+getDescription()+"  -  $"+getCost());
     }
 }

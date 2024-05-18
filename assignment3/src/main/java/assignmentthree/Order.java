@@ -9,9 +9,35 @@ public class Order {
         orderItems = new ArrayList<OrderItem>();
     }
 
-    // add
+    // add order
+    public void add(int itemNum) {
+        OrderItem item = new OrderItem(itemNum);
+        orderItems.add(item);
+    }
 
-    // delete
+    // // returns number of orders - size of arraylist
+    // public int getSize() {
+    //     return orderItems.size();
+    // }
 
-    // getter/iterator maybe
+    // Orders Iterator
+    public OrderIterator getOrderIterator() {
+        return new OrderItemsIterator();
+    }
+    private class OrderItemsIterator implements OrderIterator {
+        int position = 0;
+
+        public boolean hasNext() {
+            if (position >= orderItems.size() || orderItems.get(position) == null) {
+                return false;
+            }
+            return true;
+        }
+
+        public OrderItem next() {
+            OrderItem item = orderItems.get(position);
+            position += 1;
+            return item;
+        }
+    }
 }
