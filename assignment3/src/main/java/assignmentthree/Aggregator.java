@@ -4,9 +4,9 @@ public class Aggregator {
     MenuComponent menuComponent;
     Order order;
 
-    public Aggregator(MenuComponent menuComponent, Order order) {
+    public Aggregator(MenuComponent menuComponent) {
         this.menuComponent = menuComponent;
-        this.order = order;
+        order = new Order();
     }
 
     public MenuComponent getMenu() {

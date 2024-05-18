@@ -35,7 +35,7 @@ public class Tab {
             while (menuIterator.hasNext()) {
                 MenuComponent mItem = menuIterator.next();
 
-                if(mItem.getItemNumber() == oItem.getItemNum()) {
+                if(mItem.getItemNumber() == oItem.getItemNum()) { // 
                     tabItems.add(mItem.toString());
                 }
             }

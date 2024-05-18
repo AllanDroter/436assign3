@@ -15,7 +15,7 @@ public abstract class MenuComponent {
 
     // MenuItem classes
     public int getItemNumber() {
-        throw new UnsupportedOperationException();
+        throw new UnsupportedOperationException();  //
     }
     public String getDescription() {
         throw new UnsupportedOperationException();

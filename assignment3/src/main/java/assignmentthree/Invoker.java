@@ -19,6 +19,6 @@ public class Invoker {
 
     public void displayTab() {
         Command command = new DisplayTab(aggregator);
-        command.execute();
+        command.execute(); // 
     }
 }
