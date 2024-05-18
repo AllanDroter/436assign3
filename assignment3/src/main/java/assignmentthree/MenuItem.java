@@ -23,9 +23,9 @@ public class MenuItem extends MenuComponent{
         return cost;
     }
 
-    // public String toString() {
-    //     return ""+itemNum+". "+description+"  -  $"+cost;
-    // }
+    public String toString() {
+        return ""+getItemNumber()+". "+getDescription()+"  -  $"+getCost();
+    }
 
     public void print() {
         System.out.println(getItemNumber()+". "+getDescription()+"  -  $"+getCost());
