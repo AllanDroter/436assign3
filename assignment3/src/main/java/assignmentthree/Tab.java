@@ -35,9 +35,20 @@ public class Tab {
             while (menuIterator.hasNext()) {
                 MenuComponent mItem = menuIterator.next();
 
-                if(mItem.getItemNumber() == oItem.getItemNum()) { // 
-                    tabItems.add(mItem.toString());
+                MenuIterator menuIterator2 = mItem.getMenuIterator();
+
+                while (menuIterator2.hasNext()) {
+                    MenuComponent mItem2 = menuIterator2.next();
+
+                    if(mItem2.getItemNumber() == oItem.getItemNum()) { //  
+                        tabItems.add(mItem2.toString());
+                    }
+
                 }
+
+                // if(mItem.getItemNumber() == oItem.getItemNum()) { //  
+                //     tabItems.add(mItem.toString());
+                // }
             }
         }
 

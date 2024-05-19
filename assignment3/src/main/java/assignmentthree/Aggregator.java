@@ -18,6 +18,7 @@ public class Aggregator {
     }
 
     public Tab getTab() {
+        order.add(1);
         return new Tab(menuComponent, order);
     }
 }
