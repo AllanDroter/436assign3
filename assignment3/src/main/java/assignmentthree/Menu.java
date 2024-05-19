@@ -30,6 +30,14 @@ public class Menu extends MenuComponent{
         }
     }
 
+    // public String toString() {
+    //     MenuIterator iterator = getMenuIterator();
+    //     while (iterator.hasNext()) {
+    //         MenuComponent menuComponent = iterator.next();
+    //         return menuComponent.toString();
+    //     }
+    // }
+
     // Menu Iterator
     public MenuIterator getMenuIterator() {
         return new MenuItemsIterator();

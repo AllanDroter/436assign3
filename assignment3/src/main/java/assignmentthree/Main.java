@@ -45,13 +45,16 @@ public class Main {
         Aggregator aggregator;
         Invoker invoker = null;
 
+        aggregator = new Aggregator(fullMenu);
+        invoker = new Invoker(aggregator);
+
         while (option != 0) {
             System.out.println();
 
             switch (option) {
                 case 1: // display the menus
-                    aggregator = new Aggregator(fullMenu);
-                    invoker = new Invoker(aggregator);
+                    // aggregator = new Aggregator(fullMenu);
+                    // invoker = new Invoker(aggregator);
 
                     SystemInterface.displayMenu(invoker);
                     break;
@@ -60,30 +63,30 @@ public class Main {
                     System.out.print("Please enter your order (item number): ");
                     int itemNum = in.nextInt();
 
-                    if(itemNum < 9) {
-                        aggregator = new Aggregator(mainDishMenu);
-                        invoker = new Invoker(aggregator);
-                    }
-                    else if (itemNum > 8 && itemNum < 16) {
-                        aggregator = new Aggregator(appetizerMenu);
-                        invoker = new Invoker(aggregator);
-                    }
-                    else if (itemNum > 15 && itemNum < 22) {
-                        aggregator = new Aggregator(dessertMenu);
-                        invoker = new Invoker(aggregator);
-                    } 
-                    else {
-                        invoker = null;
-                        System.out.println("Please enter within given range");
-                    }
+                    // if(itemNum < 9) {
+                    //     aggregator = new Aggregator(mainDishMenu);
+                    //     invoker = new Invoker(aggregator);
+                    // }
+                    // else if (itemNum > 8 && itemNum < 16) {
+                    //     aggregator = new Aggregator(appetizerMenu);
+                    //     invoker = new Invoker(aggregator);
+                    // }
+                    // else if (itemNum > 15 && itemNum < 22) {
+                    //     aggregator = new Aggregator(dessertMenu);
+                    //     invoker = new Invoker(aggregator);
+                    // } 
+                    // else {
+                    //     invoker = null;
+                    //     System.out.println("Please enter within given range");
+                    // }
 
                     SystemInterface.submitOrder(invoker, itemNum);
                     break;
 
                 case 3: // display the tab
-                    if (invoker == null) {
-                        System.out.println("must make an order first");
-                    }
+                    // if (invoker == null) {
+                    //     System.out.println("must make an order first");
+                    // }
                     SystemInterface.displayTab(invoker); //
                     break;
 
