@@ -15,11 +15,6 @@ public class Order {
         orderItems.add(item);
     }
 
-    // // returns number of orders - size of arraylist
-    // public int getSize() {
-    //     return orderItems.size();
-    // }
-
     // Orders Iterator
     public OrderIterator getOrderIterator() {
         return new OrderItemsIterator();

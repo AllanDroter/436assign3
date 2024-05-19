@@ -16,18 +16,6 @@ public class Tab {
         OrderIterator orderIterator = order.getOrderIterator();
 
         ArrayList<String> tabItems = new ArrayList<String>();
-        
-        // for(int i=0; i<orderItems.size(); i++) {
-        //     for(int j=0; j<menuItems.size(); j++) {
-        //         if(menuItems.get(j).getItemNumber() == orderItems.get(i).getItemNum()) {
-        //             // add iterator (including interface) to menu and order (remove their getter methods)
-        //             // add getSize methods to menu and order
-        //             // delete the for loops later and replace with iterator
-
-        //             tabItems[i] = ""+orderItems.get(i).getItemNum()+" "+menuItems.get(j).getDescription()+" $"+menuItems.get(j).getCost();
-        //         }
-        //     }
-        // }
 
         while(orderIterator.hasNext()) {
             OrderItem oItem = orderIterator.next();
@@ -40,18 +28,12 @@ public class Tab {
                 while (menuIterator2.hasNext()) {
                     MenuComponent mItem2 = menuIterator2.next();
 
-                    if(mItem2.getItemNumber() == oItem.getItemNum()) { //  
+                    if(mItem2.getItemNumber() == oItem.getItemNum()) {
                         tabItems.add(mItem2.toString());
                     }
-
                 }
-
-                // if(mItem.getItemNumber() == oItem.getItemNum()) { //  
-                //     tabItems.add(mItem.toString());
-                // }
             }
         }
-
         return tabItems;
     }
 }
